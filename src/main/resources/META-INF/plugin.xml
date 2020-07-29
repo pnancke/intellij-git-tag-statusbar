@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>io.github.pnancke.gitTag4Intellij</id>
+    <name>Git Tag in Status Bar</name>
+    <vendor email="pnancke@users.noreply.github.com" url="http://pnancke.github.io"/>
+
+    <description><![CDATA[ <p>Shows the current Git Tag in the Status Bar of IntelliJ. The tags are automatically fetched every minute.</p>
+    <p/>
+    <p>If you encounter any problems with this plugin please create a ticket here:
+    <a href="https://github.com/pnancke/intellij-tags/issues/new">https://github.com/pnancke/intellij-tags/issues/new</a></p>
+    <p/>
+    <p><b>Note</b>: This only works if the project uses git. </p>]]></description>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory implementation="io.github.pnancke.gitTag4Intellij.GitTagStatusBarWidgetFactory" order="after notificationsWidget"/>
+    </extensions>
+</idea-plugin>
